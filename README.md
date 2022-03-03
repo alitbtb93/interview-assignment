@@ -18,6 +18,12 @@ npm run serve
 # build for production with minification
 npm run build
 
+# creating development docker image
+docker-compose -f docker-compose-dev build
+
+# creating production docker image
+docker-compose -f docker-compose-prod build
+
 # run unit tests
 npm run test:unit
 ```
