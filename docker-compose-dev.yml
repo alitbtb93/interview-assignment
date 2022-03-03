@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  thalex:
+    image: thalex:0.1.0-snapshot
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    ports:
+      - 3001:80
+    environment:
+      - TZ=Asia/Tehran
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 3

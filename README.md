@@ -1,29 +1,78 @@
-# thalex
+# Thalex Assignment
 
-## Project setup
-```
+
+## Table of Contents
+  * [Build Setup](#build-setup)
+  * [Project Structure](#project-structure)
+    - [General Project Structure](#general-project-structure)
+    - [Source Directory Structure](#source-directory-structure)
+
+## Build Setup
+``` bash
+# install dependencies
 npm install
-```
 
-### Compiles and hot-reloads for development
-```
+# serve with hot reload
 npm run serve
-```
 
-### Compiles and minifies for production
-```
+# build for production with minification
 npm run build
-```
 
-### Run your unit tests
-```
+# run unit tests
 npm run test:unit
 ```
+## Project Structure
 
-### Lints and fixes files
+### General Project Structure
+All main directories are listed below.
+```txt
+thalex
+│
+└─── public
+│   └─── ...
+│
+└─── src
+│   └─── ...
+│
+└─── tests
+│   └─── ...
 ```
-npm run lint
+#### public
+Contains favicon and index.html files.
+#### src
+[Checkout `src` directory structure](#source-directory-structure).
+#### test
+Contains unit tests files for two main components of the project(OrderBook, OrderForm).
+### Source Directory Structure
+```txt
+src
+└─── assets
+│   └─── ...
+│
+└─── common
+│   └─── ...
+│
+└─── components
+│   └─── ...
+│
+└─── services
+│   └─── ...
+│   App.vue
+│   main.js
+
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### Individual files
+
+##### assets
+Contains reset.css file.
+
+##### common
+This folder is used to save common files like most-used components(AppButton, AppInput, AppLoading, AppTable) and constants and a wrapper for fetch requests and price separator filter.
+
+#### components
+
+All main components of the app such as OrderBook and OrderForm should be placed in this directory.
+
+#### services
+Contains different services for sending requests to APIs or connecting to WebSocket.
